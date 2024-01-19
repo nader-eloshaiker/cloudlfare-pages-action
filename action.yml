@@ -1,0 +1,37 @@
+name: "Cloudflare Pages GitHub Action with GitHub Environments"
+description: "Publish to Cloudflare Pages using explicit GitHub Environments"
+branding:
+  icon: "upload-cloud"
+  color: "orange"
+inputs:
+  apiToken:
+    description: "Cloudflare API Token"
+    required: true
+  accountId:
+    description: "Cloudflare Account ID"
+    required: true
+  projectName:
+    description: "The name of the Pages project to upload to"
+    required: true
+  directory:
+    description: "The directory of static assets to upload"
+    required: true
+  gitHubToken:
+    description: "GitHub Token"
+    required: false
+  branch:
+    description: "The name of the branch you want to deploy to"
+    required: false
+  environmentName:
+    description: "The name of the GitHub environment you want to associate with the deployment"
+    required: false
+  workingDirectory:
+    description: "The working directory in which to run Wrangler"
+    required: false
+  wranglerVersion:
+    description: "The version of Wrangler to use"
+    required: false
+    default: "2"
+runs:
+  using: "node16"
+  main: "index.js"
