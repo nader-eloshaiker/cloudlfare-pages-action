@@ -1,6 +1,6 @@
 {
 	"name": "cloudflare-pages-action",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "Publish to Cloudflare Pages using explicit GitHub Environments",
 	"main": "index.js",
 	"scripts": {
